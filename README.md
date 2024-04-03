@@ -1,6 +1,6 @@
 # puppeteerTodoist
 
-Este proyecto utiliza la librería Puppeteer para automatizar la interacción con navegadores web.
+Este proyecto utiliza la librería Puppeteer para automatizar la optencion de un listado de tareas de la url "https://trello.com/b/QvHVksDa/personal-work-goals" para posteriormente ingresar aleatoriamente en una cuenta de "todoist.com".
 
 ## Requisitos
 
@@ -18,7 +18,7 @@ npm install
 ```
 
 ## Uso
-Una vez que hayas instalado las dependencias, puedes iniciar el proyecto con el siguiente comando:
+Una vez que hayas instalado las dependencias, se debe crear un archivo .env a partir del archivo env_sample que viene en la raiz del proyecto, despues de esto se puede iniciar el proyecto con el siguiente comando:
 ```bash
 npm run start
 ```
