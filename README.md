@@ -21,8 +21,8 @@ npm install
 
 Una vez que hayas instalado las dependencias, se debe crear un archivo .env a partir del archivo env_sample que viene en la raiz del proyecto
 ```bash
-USERTODOLIST= 
-PASSWORDTODOLIST=  
+USERTODOLIST= //Usuario
+PASSWORDTODOLIST=  //Contraseña
 ```
 
 Una vez terminado con los pasos anteriores, se puede iniciar el proyecto con el siguiente comando:
