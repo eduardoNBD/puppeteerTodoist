@@ -32,6 +32,7 @@ export async function getTasks(){
     });
 
     const allData = [];
+    
     for (const url of urls) 
     {
         await page.goto(url, { waitUntil: 'networkidle0' });
