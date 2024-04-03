@@ -19,7 +19,7 @@ npm install
 
 ## Uso
 
-Una vez que hayas instalado las dependencias, se debe crear un archivo .env a partir del archivo env_sample que viene en la raiz del proyecto
+Una vez que hayas instalado las dependencias, se debe crear un archivo ".env" a partir del archivo env_sample que viene en la raiz del proyecto
 ```bash
 USERTODOLIST= //Usuario de todoist
 PASSWORDTODOLIST=  //Contraseña de todoist
