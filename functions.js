@@ -32,7 +32,7 @@ export async function getTasks(){
     });
 
     const allData = [];
-    
+
     for (const url of urls) 
     {
         await page.goto(url, { waitUntil: 'networkidle0' });
@@ -129,11 +129,8 @@ export async function loginTodoList(tasks){
         
         console.log("\x1b[33m","Begin Register Tasks");
 
-        const tasksIndex = Array.from(
-            { length: 5 },
-            () => Math.floor(Math.random() * ((tasks.length-1) - 0 + 1)) + 0
-        );
-         
+        const tasksIndex = getRandomIndex(tasks.length,5);
+        console.log(tasksIndex);
         try{
             await page.waitForSelector('[data-testid="app-sidebar-container"] .fb8d74bb._14423c92._297575f4.c4a9b3ab._5f8879d9 button');
         }
@@ -223,4 +220,30 @@ export async function loginTodoList(tasks){
         console.log("End Register task")
         await browser.close();
     }
+}
+
+function getRandomIndex(max, length)
+{
+    let arrTemp = Array.from(
+        { length: length },
+        () =>  Math.floor(Math.random() * ((max-1) - 0 + 1)) + 0);
+    
+    let arrayFinal = [];
+     
+    arrTemp.forEach((ele) => {
+        if(arrayFinal.includes(ele)){
+            ele = 0;
+    
+            while(arrayFinal.includes(ele) && ele < max){
+                ele++;
+            } 
+    
+            arrayFinal.push(ele);
+        }
+        else{
+            arrayFinal.push(ele);
+        }
+    });
+    
+    return arrayFinal;
 }
